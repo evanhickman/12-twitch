@@ -56,7 +56,7 @@ function testUiForItem(el, item, assert, msgPrefix) {
   assert.equal(name.innerText.trim(), item.name,
     `${msgPrefix}: The game item name contains the game item's name from the data`);
 
-  // Check the game name
+  // Check the game popularity
   const gameName = el.querySelector('h4.game-item__popularity');
   assert.ok(gameName,
     `${msgPrefix}: The game item contains an element with the class 'game-item__popularity'`);
