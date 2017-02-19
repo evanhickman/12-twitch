@@ -14,7 +14,7 @@ $c-primary: #433f4a;
 $c-hover: #201c2b;
 $c-purple-border: #392e5c;
 $c-background-dark-purple: #17141f;
-$c-white: #fff;
+$c-white: #faf9fa;
 
 .app-main {
   position: relative;
@@ -33,6 +33,12 @@ $c-white: #fff;
     width: 240px;
     height: 100vh;
     padding: 1.2rem;
+
+    &-subheading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__logo {
@@ -65,12 +71,14 @@ $c-white: #fff;
 
   &__list {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 240px;
     color: $c-white;
 
     &-item {
-      padding: 0.6rem 1.2rem;
+      padding-left: 1.2rem;
+      line-height: 2rem;
 
       &::before {
         box-shadow: 3px 0 0 #6441a4 inset;
@@ -87,4 +95,23 @@ $c-white: #fff;
       width: 1.5rem;
     }
   }
+
+  &__subheading {
+    align-items: flex-start;
+    width: 100%;
+
+    &-title {
+      padding-bottom: 0.5rem;
+      border-bottom: thin $c-primary solid;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.subheading-icon {
+  height: 100%;
 }
