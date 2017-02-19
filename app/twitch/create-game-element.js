@@ -1,4 +1,4 @@
-export default function createGameItem(game) {
+export default function createGameElement(game) {
   const el = document.createElement('div');
   el.classList.add('game-item');
   el.innerHTML = `
