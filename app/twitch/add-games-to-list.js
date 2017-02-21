@@ -1,6 +1,6 @@
 import createGameElement from './create-game-element';
 
-export default function addGameToList(parentEl, data) {
+export default function addGamesToList(parentEl, data) {
   parentEl.innerHTML = '';
 
   for (let i = 0; i < data.length; i += 1) {

@@ -1,0 +1,102 @@
+.app-main {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav {
+  width: 240px;
+  height: 100vh;
+  background: $c-background-dark-purple;
+  overflow: scroll;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 100vh;
+    padding: 1.2rem;
+
+    &-subheading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    width: 94px;
+    height: 32px;
+    margin-bottom: 1rem;
+  }
+
+  &__search {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border: thin $c-purple-border solid;
+    background: $c-hover;
+    vertical-align: middle;
+
+    &-bar {
+      padding: 0.5rem 0;
+      border: 0;
+      background: $c-hover;
+      font-size: 0.8rem;
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      color: $c-primary;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 240px;
+    color: $c-white;
+
+    &-item {
+      padding-left: 1.2rem;
+      line-height: 2rem;
+
+      &::before {
+        box-shadow: 3px 0 0 #6441a4 inset;
+      }
+
+      &:hover {
+        background: $c-hover;
+        box-shadow: 3px 0 0 #6441a4 inset;
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 1.5rem;
+    }
+  }
+
+  &__subheading {
+    align-items: flex-start;
+    width: 100%;
+
+    &-title {
+      padding-bottom: 0.5rem;
+      border-bottom: thin $c-primary solid;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.subheading-icon {
+  height: 100%;
+}
