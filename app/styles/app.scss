@@ -1,14 +1,6 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
-// IMPORTS
-
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-@import 'font-awesome';
-@import 'box-sizing';
-@import 'resets';
-@import 'sidebar';
-
 // VARIABLES
 
 $c-primary: #433f4a;
@@ -17,12 +9,36 @@ $c-purple-border: #392e5c;
 $c-box-purple: #7239c3;
 $c-background-dark-purple: #17141f;
 $c-white: #faf9fa;
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 
-.content {
+@import 'font-awesome';
+@import 'box-sizing';
+@import 'resets';
+@import 'sidebar';
+
+.games {
   flex-grow: 1;
+  color: $c-background-dark-purple;
   overflow: scroll;
+
+  &__heading {
+    font-weight: normal;
+  }
+}
+
+.container {
+  padding: 1rem;
 }
 
 .results {
-  color: black;
+  display: flex;
+  flex-wrap: wrap;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.game-item {
+  flex-basis: calc(100% / 4 - 1rem);
 }
