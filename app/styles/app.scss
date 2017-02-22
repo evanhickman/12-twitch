@@ -9,6 +9,7 @@ $c-purple-border: #392e5c;
 $c-box-purple: #7239c3;
 $c-background-dark-purple: #17141f;
 $c-white: #faf9fa;
+$c-dark-link: #898395;
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 
 @import 'font-awesome';
@@ -33,6 +34,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 .results {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 
   > * + * {
     margin-left: 1rem;
