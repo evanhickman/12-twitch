@@ -28,7 +28,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 }
 
 .container {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 
 .results {
@@ -42,5 +42,13 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 }
 
 .game-item {
-  flex-basis: calc(100% / 4 - 1rem);
+  flex-basis: calc(100% / 4 - 0.8rem);
+
+  &:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  &:nth-of-type(9) {
+    margin-left: 0;
+  }
 }
