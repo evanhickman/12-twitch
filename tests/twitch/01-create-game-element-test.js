@@ -1,7 +1,6 @@
 /* eslint-env qunit */
 
 QUnit.module('Twitch Game Page');
-import showGamesInList from '../../app/twitch/add-games-to-list';
 
 const itemOne = {
   name: 'StarCraft II',
@@ -57,7 +56,7 @@ function testUiForItem(el, item, assert, msgPrefix) {
   assert.equal(name.innerText.trim(), item.name,
     `${msgPrefix}: The game item name contains the game item's name from the data`);
 
-  // Check the game name
+  // Check the game popularity
   const gameName = el.querySelector('h4.game-item__popularity');
   assert.ok(gameName,
     `${msgPrefix}: The game item contains an element with the class 'game-item__popularity'`);
@@ -75,24 +74,17 @@ function testUiForItem(el, item, assert, msgPrefix) {
 }
 
 
-test('it can add games to the list of games', (assert) => {
-  const parentEl = document.createElement('div');
+import createGameItem from '../../app/twitch/create-game-element';
 
-  showGamesInList(parentEl, [{ game: itemOne }, { game: itemTwo }]);
+test('it can create a gameItem element', (assert) => {
+  // Check the game item element
+  const gameItem = createGameItem(itemOne);
 
-  const gameItemOne = parentEl.querySelector('.game-item');
-  const gameItemTwo = parentEl.querySelector('.game-item:last-of-type');
+  testUiForItem(gameItem, itemOne, assert,
+    'Result of createGameItem with itemOne');
 
-  testUiForItem(gameItemOne, itemOne, assert,
-    'Result of showAllResults for itemOne');
+  const gameItemTwo = createGameItem(itemTwo);
 
   testUiForItem(gameItemTwo, itemTwo, assert,
-    'Result of showAllResults for itemOne');
-
-  showGamesInList(parentEl, [{ game: itemTwo }]);
-
-  const gameItemReset = parentEl.querySelector('.game-item');
-
-  testUiForItem(gameItemReset, itemTwo, assert,
-    'showGamesInList should empty the element before adding items');
+    'Result of createGameItem with itemTwo');
 });

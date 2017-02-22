@@ -1,0 +1,132 @@
+.app-main {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav {
+  flex-shrink: 0;
+  height: 100vh;
+  background: $c-background-dark-purple;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &__container {
+    width: 240px;
+    padding: 2rem;
+  }
+
+  &__content {
+    width: 240px;
+    height: 100vh;
+
+    &-subheading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    display: block;
+    height: 35px;
+    margin: 0 auto 1rem;
+  }
+
+  &__search {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border: thin $c-purple-border solid;
+    background: $c-hover;
+    vertical-align: middle;
+
+    &-bar {
+      padding: 0.5rem 0;
+      border: 0;
+      background: $c-hover;
+      font-size: 0.8rem;
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      color: $c-primary;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 240px;
+    color: $c-white;
+
+    &-item {
+      flex-shrink: 0;
+      padding-left: 1.2rem;
+      line-height: 2rem;
+
+      &::before {
+        box-shadow: 3px 0 0 #6441a4 inset;
+      }
+
+      &:hover {
+        background: $c-hover;
+        box-shadow: 3px 0 0 #6441a4 inset;
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 1.5rem;
+    }
+  }
+
+  &__subheading {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+
+    &-title {
+      flex-shrink: 0;
+      padding-bottom: 0.5rem;
+      border-bottom: thin $c-primary solid;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.subheading-icon {
+  height: 100%;
+}
+
+.subheading-text {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.nav-link__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 1rem 0 3rem;
+}
+
+.nav-link__column {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.nav-link__item {
+  margin: 0.2rem 0;
+  color: $c-dark-link;
+}

@@ -1,6 +1,54 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+// VARIABLES
+
+$c-primary: #433f4a;
+$c-hover: #201c2b;
+$c-purple-border: #392e5c;
+$c-box-purple: #7239c3;
+$c-background-dark-purple: #17141f;
+$c-white: #faf9fa;
+$c-dark-link: #898395;
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+
 @import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+@import 'sidebar';
+
+.games {
+  flex-grow: 1;
+  color: $c-background-dark-purple;
+  overflow: scroll;
+
+  &__heading {
+    font-weight: normal;
+  }
+}
+
+.container {
+  padding: 1.2rem;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.game-item {
+  flex-basis: calc(100% / 4 - 0.8rem);
+
+  &:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  &:nth-of-type(9) {
+    margin-left: 0;
+  }
+}

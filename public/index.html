@@ -1,12 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>10-twitch</title>
+  <title>12-twitch</title>
   <link rel="stylesheet" href="/app.css">
+  <link rel='shortcut icon' type='image/x-icon' href='./images/Glitch_White_RGB.png' />
 </head>
+
 <body>
-  change
+  <div class="app-main">
+    <!-- SIDEBAR -->
+    <div class="nav">
+      <!-- <div class="section"> -->
+      <div class="container">
+        <div class="nav__content">
+          <div class="nav__logo-container">
+            <a href="#"><img src="./images/Twitch_White_RGB.png" alt="twitch logo" class="nav__logo"></a>
+          </div>
+          <div class="nav__search">
+            <span class="nav__search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            <span><input type="text" placeholder="Search" class="nav__search-bar"></span>
+          </div>
+          <!-- SIDEBAR LIST -->
+          <div class="nav__list">
+            <a href="#">
+              <div class="nav__list-item">
+                <span class="nav__list-icon"><i class="fa fa-gamepad" aria-hidden="true"></i></span>
+                <span class="nav__list-text">Games</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="nav__list-item">
+                <span class="nav__list-icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                <span class="nav__list-text">Communities</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="nav__list-item">
+                <span class="nav__list-icon"><i class="fa fa-video-camera" aria-hidden="true"></i></span>
+                <span class="nav__list-text">Channels</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="nav__list-item">
+                <span class="nav__list-icon"><i class="fa fa-play" aria-hidden="true"></i></span>
+                <span class="nav__list-text">Videos</span>
+              </div>
+            </a>
+            <a href="#">
+              <div class="nav__list-item">
+                <span class="nav__list-icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                <span class="nav__list-text">Creative</span>
+              </div>
+            </a>
+          </div>
+          <!-- NAV SUBHEADING PRIME -->
+          <div class="nav__content-subheading">
+            <div class="nav__subheading">
+              <h3 class="nav__subheading-title">Free with Prime</h3>
+              <a href="#">
+                <div class="nav__subheading-item">
+                  <img src="http://placehold.it/30x30" alt="" class="subheading-icon">
+                  <span class="subheading-text">For Honor Twitch Prime Bundle</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="nav__subheading-item">
+                  <img src="http://placehold.it/30x30" alt="" class="subheading-icon">
+                  <span class="subheading-text">Combat Comics Pack</span>
+                </div>
+              </a>
+            </div>
+            <!-- NAV SUBHEADING RECOMMENDED -->
+            <div class="nav__subheading">
+              <h3 class="nav__subheading-title">Recommended Channels</h3>
+              <a href="#">
+                <div class="nav__subheading-item">
+                  <img src="http://placehold.it/30x30" alt="" class="subheading-icon">
+                  <span class="subheading-text">PlayHearthstone</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="nav__subheading-item">
+                  <img src="http://placehold.it/30x30" alt="" class="subheading-icon">
+                  <span class="subheading-text">dreamhackcs</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="nav__subheading-item">
+                  <img src="http://placehold.it/30x30" alt="" class="subheading-icon">
+                  <span class="subheading-text">GamesDoneQuick</span>
+                </div>
+              </a>
+            </div>
+            <!-- NAV SUBHEADING MORE -->
+            <div class="nav__subheading">
+              <h3 class="nav__subheading-title">More at Twitch</h3>
+            </div>
+            <div class="nav-link__row">
+              <div class="nav-link__column">
+                <div class="nav-link__item">About</div>
+                <div class="nav-link__item">Blog</div>
+                <div class="nav-link__item">Cookie Policy</div>
+                <div class="nav-link__item">Help</div>
+                <div class="nav-link__item">Language</div>
+                <div class="nav-link__item">Partners</div>
+                <div class="nav-link__item">Store</div>
+              </div>
+              <div class="nav-link__column">
+                <div class="nav-link__item">Advertisers</div>
+                <div class="nav-link__item">Creative</div>
+                <div class="nav-link__item">Developers</div>
+                <div class="nav-link__item">Jobs</div>
+                <div class="nav-link__item">Music</div>
+                <div class="nav-link__item">Press</div>
+                <div class="nav-link__item">Terms</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="games">
+      <div class="container">
+        <h1 class="games__heading">All Games</h1>
+        <div class="results">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="/app.js" charset="utf-8"></script>
 </body>
+
 </html>
